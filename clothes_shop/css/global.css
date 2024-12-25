@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --text-font: 'PT Sans', sans-serif;
+    --header-background: rgb(34, 35, 35);
+    --text-color: rgb(255, 255, 255);
+    --header-special-color: rgb(244, 1, 6);
+    --header-second-special-color: rgb(252, 82, 85);
+    --header-paragraf-color: rgba(34, 35, 35, 0.46);
+    --title-font: 'Bebas Neue', sans-serif;
+    --main-paragraf-color: rgb(113, 116, 116);
+    --main-catalog-link-color: rgb(113, 116, 116, 0.5);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+a,p,h2{
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--text-font);
+}
+h1{
+    font-family: var(--title-font);
+}
+h3{
+    font-family: var(--title-font);
+    color: var(--text-color);
+    font-size: 22px;
+    padding: 16px 0;
+}
+ul{
+    list-style-type: none;
+}
+hr{
+    border: 2px solid red;
+    width: 70px;
+}
+button{
+    background: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    margin: auto 0;
+    cursor: pointer;
+    z-index: 2;
+}
+button:hover,
+button:active{
+    background-color: rgb(0, 0, 0, 0.9);
+}
+.fixed{
+    overflow: hidden;
+}
