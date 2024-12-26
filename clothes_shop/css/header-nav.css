@@ -1,6 +1,7 @@
 .header__nav{
     background-color: var(--header-background);
     padding: 0 24px;
+    
 }
 .header__nav-content{
     display: flex;
@@ -11,6 +12,7 @@
 
 .header__nav-logo{
     width: 168px;
+    margin-bottom: 15px;
 }
 
 .header__nav-menu{
@@ -92,28 +94,10 @@
 }
 .nav-list__link a{
     color: var(--text-color);
-    position: relative;
     text-decoration: none;
-}
-.nav-list__link a::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    border-radius: 4px;
-    background-color: var(--text-color);
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
 }
 .nav-list__link a:hover{
     opacity: 0.6;
-}
-.nav-list__link a:hover::before{
-    transform-origin: left;
-    transform: scaleX(1);
 }
 .header__nav-socialmedia{
     display: flex;
@@ -140,6 +124,30 @@
     opacity: 1;
 }
 
+
+.dropdown {
+    opacity: 0;
+    width: 100vw;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    padding: 10px 0;
+    transition: opacity 0.6s ease, transform 0.3s ease; 
+    background-color: var(--header-background);
+    z-index: 1;
+    text-align: center;
+  }
+  
+.dropdown li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+.nav-list__link:hover .dropdown {
+    visibility: hidden;
+  }
+
 @media(min-width:800px) {
     .header__menu-btn{
         display: none;
@@ -162,5 +170,10 @@
     .header__nav-socialmedia{
         padding: 0;
         
+    }
+    .nav-list__link:hover .dropdown {
+        opacity: 1; 
+        visibility: visible; 
+       
     }
 }
